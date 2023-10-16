@@ -1,5 +1,8 @@
-import express from 'express'
+import app from './src/app'
+import { PORT } from './src/config'
 
-const app = express()
+const port = PORT || 3000
 
-export default app
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`)
+})
